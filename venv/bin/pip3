@@ -1,4 +1,4 @@
-#!/Users/vlad/PycharmProjects/streamlitToxic/venv/bin/python3
+#!/Users/vlad/Documents/Web/toxic-comments-classification/frontend/venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys
