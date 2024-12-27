@@ -20,5 +20,15 @@ if uploaded_file is not None:
         st.error('Необходимые столбцы: toxicity и comment_text - отсутствуют в вашем файле.')
     else:
         st.dataframe(data)
+
+        st.header('Аналитика по датасету')
+        st.markdown('Количество записей: {}'.format(len(data)))
+        st.markdown('Количество уникальных комментариев: {}'.format(data['comment_text'].nunique()))
+
+        st.header('Обучение модели')
+        model = st.selectbox("Выберите модель для обучение", ['Logistic Regression', 'SVC', 'Кастомная модель'])
+        if model:
+            st.button('Обучить модель')
+
 else:
     st.write('Файл не выбран.')
