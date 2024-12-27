@@ -246,7 +246,6 @@ if shared_data is not None:
     start_time = time()
     data = shared_data
 
-    st.header('Аналитика по датасету')
     st.markdown('Количество записей: {}'.format(len(data)))
     st.markdown('Количество уникальных комментариев: {}'.format(data['comment_text'].nunique()))
 
